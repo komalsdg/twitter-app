@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-sm-6.col-md-4.col-md-offset-4
+				#user
+					h1.text-center.login-title Welcome #{user.username}
+					a(href='/signout', class='text-center linkstyle') Sign Out
+					
+					br
+					table(style="width:50%;margin:auto;")
+						tr
+							td Id
+							td #{user.twitter.id}
+						tr
+							td User Name
+							td #{user.twitter.username}
+						tr
+							td Display Name
+							td #{user.twitter.displayName}
+					
+					a(href='/tweet', class='text-center linkstyle') Tweets

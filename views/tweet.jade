@@ -1,0 +1,11 @@
+extends layout
+
+block content
+	div.container
+		div.row
+			div.col-sm-6.col-md-3.col-md-offset-4
+				if(typeof tweet != 'undefined')
+					for result in tweet 
+						p #{result.text}
+				else
+					h3 No Data Found
