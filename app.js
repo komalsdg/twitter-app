@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 // mongo database
 var dbConfig = require('./db');
 var mongoose = require('mongoose');
-mongoose.connect(dbConfig.url);
+mongoose.connect(dbConfig.url, { useNewUrlParser: true });
 
 var app = express();
 
